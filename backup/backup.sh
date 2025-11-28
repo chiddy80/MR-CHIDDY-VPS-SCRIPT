@@ -66,7 +66,7 @@ if command -v rclone &> /dev/null && rclone listremotes | grep -q "dr:"; then
     if [[ -n "$url" ]]; then
         id=$(echo $url | grep -o 'id=[^&]*' | cut -d'=' -f2)
         # FIXED: Removed /u/4/ to use current user's Google account instead of former owner's
-        link="https://drive.google.com/uc?id=${id}&export=download"
+        link="https://drive.google.com/u/4/uc?id=${id}&export=download"
         
         echo -e "${SUCCESS}✅ Backup Completed Successfully${NC}"
         echo -e "${DIVIDER}"
